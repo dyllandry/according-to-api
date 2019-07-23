@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "author",
+    "description": "Users who write posts."
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "email": {
+      "unique": true,
+      "required": true,
+      "type": "email"
+    },
+    "displayName": {
+      "maxLength": 25,
+      "required": true,
+      "type": "string"
+    },
+    "password": {
+      "maxLength": 25,
+      "required": true,
+      "type": "password"
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}

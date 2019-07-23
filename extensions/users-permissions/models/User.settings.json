@@ -55,15 +55,6 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
-    },
-    "picture": {
-      "model": "file",
-      "via": "related",
-      "plugin": "upload"
-    },
-    "posts": {
-      "collection": "post",
-      "via": "user"
     }
   }
 }

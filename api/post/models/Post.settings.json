@@ -31,11 +31,6 @@
       "via": "related",
       "plugin": "upload"
     },
-    "user": {
-      "model": "user",
-      "via": "posts",
-      "plugin": "users-permissions"
-    },
     "tags": {
       "collection": "tag",
       "via": "posts",

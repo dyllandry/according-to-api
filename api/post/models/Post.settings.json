@@ -1,0 +1,45 @@
+{
+  "connection": "default",
+  "collectionName": "post",
+  "info": {
+    "name": "post",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "maxLength": 75,
+      "required": true,
+      "type": "string"
+    },
+    "description": {
+      "maxLength": 175,
+      "type": "text"
+    },
+    "body": {
+      "maxLength": 6000,
+      "required": true,
+      "type": "text"
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "user": {
+      "model": "user",
+      "via": "posts",
+      "plugin": "users-permissions"
+    },
+    "tags": {
+      "collection": "tag",
+      "via": "posts",
+      "dominant": true
+    }
+  }
+}

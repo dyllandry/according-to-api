@@ -1,14 +1,33 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "tag",
   "info": {
     "name": "tag",
     "description": ""
   },
   "options": {
-    "timestamps": true
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
-    
+    "name": {
+      "minLength": 2,
+      "required": true,
+      "unique": true,
+      "maxLength": 15,
+      "type": "string"
+    },
+    "weight": {
+      "type": "float",
+      "default": "0",
+      "required": true,
+      "max": 1
+    },
+    "posts": {
+      "collection": "post",
+      "via": "tags"
+    }
   }
 }

@@ -28,6 +28,10 @@
       "model": "file",
       "via": "related",
       "plugin": "upload"
+    },
+    "posts": {
+      "collection": "post",
+      "via": "author"
     }
   }
 }
